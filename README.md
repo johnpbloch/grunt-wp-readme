@@ -96,6 +96,74 @@ Type: `String`
 
 The default value of the Screenshots
 
+### Configuration
+
+#### displayName
+
+Type: `String` **REQUIRED**
+
+Your plugin's display name
+
+#### contributors
+
+Type: `Array` **REQUIRED**
+
+An array of wordpress.org usernames. At least one must be specified.
+
+#### donateLink
+
+Type: `Array`
+
+Optional URL for donations
+
+#### tags
+
+Type: `Array`
+
+An array of tags to help people find your plugin
+
+#### minimumVersion
+
+Type: `String` **REQUIRED**
+
+The minimum supported version of WordPress that your plugin works with
+
+#### testedUpTo
+
+Type: `String` **REQUIRED**
+
+The version of WordPress up to which you've verified that your plugin works
+
+#### stableTag
+
+Type: `String` **REQUIRED**
+
+The current stable version of your plugin.
+
+#### license
+
+Type: `String`
+
+License under which your plugin is distributed. Defaults to `GPL 2.0+`.
+
+#### licenseURI
+
+Type: `String`
+
+Link to license text. Defaults to `http://www.gnu.org/licenses/gpl-2.0.html`
+
+#### blurb
+
+Type: `String`
+
+A short (preferably one sentence) description of your plugin
+
+#### sections
+
+Type: `Object`
+
+An object detailing the contents of any sections of the plugin's `readme.txt`. See below for more details on sections and their structure/format.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
