@@ -214,7 +214,7 @@ Array of changelog objects. changelog objects have the following properties:
 
 For example:
 
-```json
+```js
 changelog: [
   {
     version: '1.0.1',
