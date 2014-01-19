@@ -45,13 +45,13 @@ grunt.initConfig({
       licenseURI: 'http://www.gnu.org/licenses/gpl-2.0.html',
       blurb: '',
       sections: {
-        description: '', // String. Longer description of plugin. Defaults to the blurb.
-        installation: '', // String or array of instructions.
-        faq: [], // Array of faq objects
-        screenshots: [], // Array of screenshot captions
-        changelog: [], // Array of changelog objects
-        upgrade: '', // String. Upgrade notice contents
-        extra: {header: false, body: false} // Extra arbitrary section. Optional. May set strings for header and body to define the header (tab) and its contents.
+        description: '',
+        installation: '',
+        faq: [],
+        screenshots: [],
+        changelog: [],
+        upgrade: '',
+        extra: {header: false, body: false}
       }
     },
   },
@@ -163,6 +163,86 @@ A short (preferably one sentence) description of your plugin
 Type: `Object`
 
 An object detailing the contents of any sections of the plugin's `readme.txt`. See below for more details on sections and their structure/format.
+
+### Sections
+
+#### description
+
+Type: `String`
+
+Longer description of plugin. Defaults to the value set in `blurb`.
+
+#### installation
+
+Type: `String|Array`
+
+String or array of strings detailing installation instructions. If an array of strings is provided, they will be turned into an ordered list.
+
+#### faq
+
+Type: `Array`
+
+Array of faq objects. Faq objects must have a `question` and `answer` property. For example:
+
+```js
+faq: [
+  {
+    question: 'What is this?',
+    answer: 'This is a FAQ sections!'
+  },
+  {
+    question: 'Do people really ask this with any degree of frequency?',
+    answer: 'No... :('
+  }
+]
+```
+
+#### screenshots
+
+Type: `Array`
+
+Array of screenshot captions. They will be added in the order in which they are given.
+
+#### changelog
+
+Type: `Array`
+
+Array of changelog objects. changelog objects have the following properties:
+* **version** *Required* Type: `String`. The version of the release being described
+* **changes** *Required* Type: `Array`. An array of changes made in this version. Will be turned into an unordered list.
+* **releaseDate** *Optional* Type: `String`. An optional date of release for the current version. If provided, it will be prepended to the unordered list of changes in this format: `Released: {{date}}`. The format of the date doesn't really matter. It's just a string.
+
+For example:
+
+```json
+changelog: [
+  {
+    version: '1.0.1',
+    changes: [
+      'Fixed a fatal error caused by using the plugin',
+      'Started using grunt-wp-readme. ZOMG'
+    ],
+    releaseDate: '1/17/2014'
+  },
+  {
+    version: '1.0',
+    changes: ['Initial release.'],
+    releaseDate: '2014-01-13'
+  }
+]
+```
+
+#### upgrade
+
+Type: `String`
+
+Upgrade notice contents
+
+#### extra
+
+Type: `Object`
+
+If your plugin has an extra arbitrary section of the readme, you can define the header and body of it here, using an object with a `header` and `body` property.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
