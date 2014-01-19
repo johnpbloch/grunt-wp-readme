@@ -58,7 +58,43 @@ grunt.initConfig({
 });
 ```
 
-More documentation coming soon.
+### Options
+
+#### readme
+
+Type: `String`
+
+You can specify a custom location for the readme.txt file to be saved. By default, it will be saved to `readme.txt` in the same directory as your `Gruntfile.js` file. If the value you set for `readme` doesn't end with `readme.txt`, it is assumed to be a directory and will append `/readme.txt` to the value.
+
+#### defaultInstallation
+
+Type: `String`
+
+The default value of the Installation section if it is left undefined in your configuration
+
+#### defaultFaq
+
+Type: `String`
+
+The default value of the FAQ section if left undefined
+
+#### defaultChangelog
+
+Type: `String`
+
+The default value of the Changelog section if left undefined
+
+#### defaultUpgrade
+
+Type: `String`
+
+The default value of the Upgrade Notice section if left undefined
+
+#### defaultScreenshots
+
+Type: `String`
+
+The default value of the Screenshots
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
