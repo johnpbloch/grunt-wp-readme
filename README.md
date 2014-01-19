@@ -26,12 +26,12 @@ In your project's Gruntfile, add a section named `wp_readme` to the data object 
 grunt.initConfig({
   wp_readme: {
     options: {
-      readme: 'readme.txt', // This value will be treated as a directory if it doesn't end with readme.txt
-      defaultInstallation: '', // The default value of the Installation section if left undefined
-      defaultFaq: '', // The default value of the FAQ section if left undefined
-      defaultChangelog: '', // The default value of the Changelog section if left undefined
-      defaultUpgrade: '', // The default value of the Upgrade Notice section if left undefined
-      defaultScreenshots: '' //  The default value of the Screenshots section if left undefined
+      readme: 'readme.txt',
+      defaultInstallation: '',
+      defaultFaq: '',
+      defaultChangelog: '',
+      defaultUpgrade: '',
+      defaultScreenshots: ''
     },
     your_target: {
       displayName: 'Your Plugin Display Name',
