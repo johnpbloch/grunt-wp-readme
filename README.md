@@ -34,7 +34,17 @@ grunt.initConfig({
       defaultScreenshots: '' //  The default value of the Screenshots section if left undefined
     },
     your_target: {
-      // Target-specific file lists and/or options go here.
+      displayName: 'Your Plugin Display Name',
+      contributors: ['JohnPBloch'], // An array of wordpress.org usernames
+      donateLink: '', // Optional. URL for donations
+      tags: [], // An array of tags to help people find your plugin
+      minimumVersion: '3.5', // The minimum supported version of WordPress that your plugin works with
+      testedUpTo: '3.8', // The version of WordPress up to which you've verified that your plugin works
+      stableTag: '1.0.2', // The current stable version of your plugin
+      license: 'GPL-2.0+', // License under which your plugin is distributed. Defaults to GPL 2.0+.
+      licenseURI: 'http://www.gnu.org/licenses/gpl-2.0.html', // Link to license text
+      blurb: '', // A short (preferably one sentence) description of your plugin
+      sections: {} // Content for the various sections of the readme
     },
   },
 });
