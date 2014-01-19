@@ -44,7 +44,15 @@ grunt.initConfig({
       license: 'GPL-2.0+', // License under which your plugin is distributed. Defaults to GPL 2.0+.
       licenseURI: 'http://www.gnu.org/licenses/gpl-2.0.html', // Link to license text
       blurb: '', // A short (preferably one sentence) description of your plugin
-      sections: {} // Content for the various sections of the readme
+      sections: { // Content for the various sections of the readme
+        description: '', // String. Longer description of plugin. Defaults to the blurb.
+        installation: '', // String or array of instructions.
+        faq: [], // Array of faq objects
+        screenshots: [], // Array of screenshot captions
+        changelog: [], // Array of changelog objects
+        upgrade: '', // String. Upgrade notice contents
+        extra: {header: false, body: false} // Extra arbitrary section. Optional. May set strings for header and body to define the header (tab) and its contents.
+      }
     },
   },
 });
