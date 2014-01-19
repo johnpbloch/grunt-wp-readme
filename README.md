@@ -1,6 +1,6 @@
 # grunt-wp-readme
 
-> Generate a readme.txt for your WordPress plugins.
+Generate a readme.txt for your WordPress plugins.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -26,7 +26,12 @@ In your project's Gruntfile, add a section named `wp_readme` to the data object 
 grunt.initConfig({
   wp_readme: {
     options: {
-      readme: 'output/readme.txt' // This value will be treated as a directory if it doesn't end with readme.txt
+      readme: 'readme.txt', // This value will be treated as a directory if it doesn't end with readme.txt
+      defaultInstallation: '', // The default value of the Installation section if left undefined
+      defaultFaq: '', // The default value of the FAQ section if left undefined
+      defaultChangelog: '', // The default value of the Changelog section if left undefined
+      defaultUpgrade: '', // The default value of the Upgrade Notice section if left undefined
+      defaultScreenshots: '' //  The default value of the Screenshots section if left undefined
     },
     your_target: {
       // Target-specific file lists and/or options go here.
