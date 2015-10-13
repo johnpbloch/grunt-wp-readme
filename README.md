@@ -1,5 +1,4 @@
-# grunt-wp-readme
-
+# grunt-wp-readme 
 Generate a readme.txt for your WordPress plugins.
 
 ## Getting Started
@@ -43,6 +42,8 @@ grunt.initConfig({
       stableTag: '',
       license: 'GPL-2.0+',
       licenseURI: 'http://www.gnu.org/licenses/gpl-2.0.html',
+      textDomain: '',
+      domainPath: '',
       blurb: '',
       sections: {
         description: '',
@@ -151,6 +152,18 @@ License under which your plugin is distributed. Defaults to `GPL 2.0+`.
 Type: `String`
 
 Link to license text. Defaults to `http://www.gnu.org/licenses/gpl-2.0.html`
+
+#### textDomain
+
+Type: `String`
+
+The textdomain of the plugin for internationalization.
+
+#### domainPath
+
+Type: `String`
+
+The location of your translation files relative to the root directory of your plugin. If specified, it should have a leading slash.
 
 #### blurb
 
