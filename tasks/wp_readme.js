@@ -26,6 +26,8 @@ module.exports = function (grunt) {
 				'Stable tag: ' + data.stableTag + '\n' +
 				'License: ' + data.license + '\n' +
 				'License URI: ' + data.licenseURI + '\n' +
+				(data.textDomain ? 'Text Domain: ' + data.textDomain + '\n' : '') +
+				(data.domainPath ? 'Domain Path: ' + data.domainPath + '\n' : '') +
 				'\n' +
 				data.blurb + '\n' +
 				'\n';
@@ -175,6 +177,8 @@ module.exports = function (grunt) {
 			stableTag     : this.data.stableTag || false,
 			license       : this.data.license || 'GPL-2.0+',
 			licenseURI    : this.data.licenseURI || 'http://www.gnu.org/licenses/gpl-2.0.html',
+			textDomain    : this.data.textDomain || false,
+			domainPath    : this.data.domainPath || false,
 			blurb         : this.data.blurb || '',
 			sections      : this.data.sections || {}
 		};
